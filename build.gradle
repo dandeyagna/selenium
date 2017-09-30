@@ -12,7 +12,7 @@ dependencies {
         exclude group: "org.testng", module: "testng"
     }
     compile "com.jcraft:jsch:0.1.44-1"
-    compile "org.seleniumhq.selenium:selenium-java:2.53.0"
+    compile "org.seleniumhq.selenium:selenium-java:3.6.0"
     compile "javax.servlet:servlet-api:2.5"
     compile "net.sourceforge.jexcelapi:jxl:2.6.12"
     // https://mvnrepository.com/artifact/info.cukes/cucumber-core

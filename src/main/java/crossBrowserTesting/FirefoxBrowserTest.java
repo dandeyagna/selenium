@@ -3,14 +3,16 @@ package crossBrowserTesting;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class FirefoxBrowserTest {
 public static void main(String[] args) throws InterruptedException {
-	FirefoxDriver driver =  new FirefoxDriver();
-	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+	//https://github.com/mozilla/geckodriver/releases
+	System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
+	WebDriver driver =  new FirefoxDriver();
 	driver.get("http://qabidder.net/testwave/#/page/login");
 	Thread.sleep(10000);
 	

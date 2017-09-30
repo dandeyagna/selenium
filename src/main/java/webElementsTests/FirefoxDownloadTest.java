@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class FirefoxDownloadTest {
 	public static String downloadPath = "/tmp";
@@ -16,8 +18,13 @@ public class FirefoxDownloadTest {
 		
 		//Deleting the file
 		f.delete();
-		
-		WebDriver driver = new FirefoxDriver(getFirefoxDriverProfile());
+		System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		capabilities.setCapability("marionette", true);
+		FirefoxOptions option=new FirefoxOptions();
+		option.setProfile(getFirefoxDriverProfile());
+		//WebDriver driver =  new FirefoxDriver(capabilities);
+		WebDriver driver = new FirefoxDriver(option);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://www.sample-videos.com/download-sample-xls.php");

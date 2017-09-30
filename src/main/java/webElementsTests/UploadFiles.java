@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class UploadFiles {
 
 	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		

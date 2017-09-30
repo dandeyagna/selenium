@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class PopUps {
 public static void main(String[] args) {
+	System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 	FirefoxDriver driver = new FirefoxDriver();
 	driver.get("http://www.globalrph.com/davescripts/popup.htm");
 	

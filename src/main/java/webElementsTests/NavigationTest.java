@@ -4,6 +4,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class NavigationTest {
 	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 		FirefoxDriver driver = new FirefoxDriver();
 
 

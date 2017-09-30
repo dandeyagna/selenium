@@ -26,11 +26,13 @@ public class PropertiesTest {
 			System.out.println("Browser selected is "+browser);
 			
 			if(browser.equals("firefox")){
+				System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 				wb = new FirefoxDriver();
 			}else if(browser.equals("chrome")){
 				System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
 				wb = new ChromeDriver();
 			}else{
+				System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 				wb = new FirefoxDriver();
 			}
 			

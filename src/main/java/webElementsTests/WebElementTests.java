@@ -8,9 +8,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebElementTests {
 public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
 	FirefoxDriver driver =  new FirefoxDriver();
-	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+//	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//	driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 	driver.get("http://qabidder.net/testwave/#/page/login");
 	Thread.sleep(10000);
 	
@@ -24,7 +25,7 @@ public static void main(String[] args) throws InterruptedException {
 	WebElement loginButton = driver.findElement(By.tagName("button"));
 	loginButton.click();
 	
-	Thread.sleep(4000);
+	Thread.sleep(10000);
 	
 	//Hyperlink
 //	WebElement forgotPasswordLink = driver.findElement(By.xpath("html/body/div[2]/div/div/div[1]/div[2]/form/div[3]/div/a"));

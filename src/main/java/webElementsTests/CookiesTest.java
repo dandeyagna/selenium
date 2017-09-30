@@ -2,14 +2,17 @@ package webElementsTests;
 import java.util.Set;
 
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
 public class CookiesTest {
 	
 	@Test
 	public void testCookies(){
-		FirefoxDriver wb = new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
+		WebDriver wb =  new FirefoxDriver();
 
 		wb.get("http://www.gmail.com");
 

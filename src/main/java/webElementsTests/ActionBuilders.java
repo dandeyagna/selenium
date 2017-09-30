@@ -7,10 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ActionBuilders {
 	public static void main(String[] args) {
-		WebDriver driver = new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver", "/Users/ydande/Downloads/geckodriver"); 
+//		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//		capabilities.setCapability("marionette", true);
+		WebDriver driver =  new FirefoxDriver();
 		driver.get("http://www.google.com");
 		WebElement element = driver.findElement(By.name("q"));
 

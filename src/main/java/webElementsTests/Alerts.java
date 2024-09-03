@@ -13,14 +13,15 @@ public static void main(String[] args) throws InterruptedException {
 	driver.findElement(By.name("password")).sendKeys("UrAhEbe");
 	driver.findElement(By.name("btnLogin")).click();
 	Thread.sleep(5000);
-	driver.findElement(By.name("cusid")).sendKeys("99415");
-	driver.findElement(By.name("AccSubmit")).click();
+//	driver.findElement(By.name("cusid")).sendKeys("99415");
+//	driver.findElement(By.name("AccSubmit")).click();
 	
 	Alert alert = driver.switchTo().alert();
-	alert.accept();
-	alert.dismiss();
+//	alert.accept();
+//	alert.dismiss();
 	String text = alert.getText();
 	System.out.println(text);
+	alert.accept();
 	
   }
 }

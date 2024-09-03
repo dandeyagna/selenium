@@ -9,7 +9,7 @@ public class Alerts {
 public static void main(String[] args) throws InterruptedException {
 	WebDriver driver = new FirefoxDriver();
 	driver.get("http://demo.guru99.com/V4");
-	driver.findElement(By.name("udid")).sendKeys("mngr90984");
+	driver.findElement(By.name("uid")).sendKeys("mngr90984");
 	driver.findElement(By.name("password")).sendKeys("UrAhEbe");
 	driver.findElement(By.name("btnLogin")).click();
 	Thread.sleep(5000);
